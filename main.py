@@ -7,19 +7,19 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
 def startup():
-  #set ver to w for automatic relaunches, g for keybind relaunches
-  ver = "w"
-  subprocess.Popen(['open', '-a', "/Applications/Spotify.app"])
-  time.sleep(3)
-  pyautogui.press('space')
-  time.sleep(.5)
-  pyautogui.hotkey('command', 'h')
-  time.sleep(.25)
-  pyautogui.hotkey('command', 'h')
-  sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="YOUR_APP_CLIENT_ID",
-                                                 client_secret="YOUR_APP_CLIENT_SECRET",
-                                                 redirect_uri="YOUR_APP_REDIRECT_URI",
-                                                 scope="user-read-currently-playing"))
+    #set ver to w for automatic relaunches, g for keybind relaunches
+    ver = "w"
+    subprocess.Popen(['open', '-a', "/Applications/Spotify.app"])
+    time.sleep(3)
+    pyautogui.press('space')
+    time.sleep(.5)
+    pyautogui.hotkey('command', 'h')
+    time.sleep(.25)
+    pyautogui.hotkey('command', 'h')
+    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="YOUR_APP_CLIENT_ID",
+                                                   client_secret="YOUR_APP_CLIENT_SECRET",
+                                                   redirect_uri="YOUR_APP_REDIRECT_URI",
+                                                   scope="user-read-currently-playing"))
 
 def on_press(key):
     if key == keyboard.Key.caps_lock:
