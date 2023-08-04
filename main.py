@@ -2,7 +2,7 @@ import time
 from pynput import keyboard
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-from funcs import restart, on_press, setup
+from funcs import restart, setup
 from creds import client_id, client_secret, redirect_uri
 
 #set ver to w for automatic relaunches, g for keybind relaunches
