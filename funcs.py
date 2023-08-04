@@ -2,9 +2,8 @@ import subprocess
 import time
 import pyautogui
 from pynput import keyboard
-from spotifyadkiller import ver
 
-def setup():
+def setup(ver):
     subprocess.Popen(['open', '-a', "/Applications/Spotify.app"])
     time.sleep(3)
     pyautogui.press('space')
@@ -23,7 +22,7 @@ def on_press(key):
         pyautogui.press('space')
         pyautogui.hotkey('command', 'h')
           
-def restart():
+def restart(ver):
     if ver == 'w':
         subprocess.call(['osascript', '-e', 'tell application "Spotify" to quit'])
         time.sleep(2)
