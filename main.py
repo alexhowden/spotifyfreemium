@@ -27,9 +27,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="YOUR_APP_CLIENT_ID",
 if ver in ["work", "w"]:
     while True:
         try:
-            print("x")
             if sp.current_user_playing_track()['currently_playing_type'] == 'ad':
-                print("t")
                 subprocess.call(['osascript', '-e', 'tell application "Spotify" to quit'])
                 time.sleep(2)
                 subprocess.Popen(['open', '-a', "/Applications/Spotify.app"])
@@ -37,7 +35,6 @@ if ver in ["work", "w"]:
                 pyautogui.press('space')
                 time.sleep(.5)
                 pyautogui.hotkey('command', 'h')
-            print("m")
             time.sleep(3)
         except:
             pass
