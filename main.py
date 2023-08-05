@@ -1,5 +1,4 @@
 import time
-from pynput import keyboard
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from funcs import restart, setup
